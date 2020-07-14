@@ -1,0 +1,24 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+  <title>Sobre - Josué Filipe</title>
+
+{% endblock %}
+
+{% block content %}
+
+  <div id="wrapper">
+    <img src="https://avatars0.githubusercontent.com/u/47889306?s=460&u=6577fd93874161fc7c386bbf37b1e05019de0503&v=4" alt="Imagem de {{ about.name }}">
+    <h1>{{ about.name }}</h1>
+    <h2>{{ about.role }}</h2>
+    <p>{{ about.description }}</p>
+  </div>
+
+  <div id="links-footer" class="links">
+    {% for link in about.links %}
+      <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+    {% endfor%}
+  </div><br><br>
+
+{% endblock %}
